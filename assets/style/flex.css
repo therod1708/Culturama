@@ -1,0 +1,116 @@
+/*Cabecalho*/
+.menu {
+    display: flex; /*itens um lado do outro (container)*/
+    justify-content: space-evenly; /*divide os espaços por igual*/
+    align-items: center; /*centraliza os itens no meio do header*/
+    flex-wrap: wrap; /*gera uma quebra de linha e o placeholder vai para baixo*/
+    column-gap: 33px; /*define o espaçamento entre colunas*/
+}
+
+/*Categorias*/
+.categorias__lista {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+/*Destaques*/
+.destaques {
+    display: flex;
+    column-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.destaques__barra {
+    flex-grow: 1; /*A propriedade flex-grow é ultilizada para expandir elementos de acordo com o espaço disponível em um flex-container*/
+}
+
+/*Eventos*/
+
+.eventos__lista {
+    display: flex; /*organiza os elementos em linha*/
+    flex-wrap: wrap; /*gera uma quebra de linha formando duas colunas*/
+    justify-content: center;
+    column-gap: 1.5rem; /*gera uma quebra de linha entre colunas*/
+    row-gap: 1rem; /*gera uma quebra de linha entre linhas*/
+}
+
+.eventos__item {
+    flex-grow: 1;
+    max-width: 400px; 
+}
+
+.agenda__lista {
+    display: flex; 
+    flex-wrap: wrap; 
+    row-gap: 1rem; 
+    column-gap: 1.5rem; 
+    justify-content: center; 
+}
+
+
+.agenda__item {
+    display: flex; 
+    flex-wrap: wrap;
+    flex-grow: 1; 
+}
+
+.agenda__informacoes {
+    width: 50%;
+}
+
+.agenda__atracao {
+    width: 50%; 
+}
+
+.rodape {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.rodape__logo {
+    align-self: end;
+}
+
+@media screen and (min-width: 720px) {
+    /*Cabecalho*/
+    .menu {
+        column-gap: 4.5rem; 
+    }
+    /*Categorias*/
+    .categorias__lista {
+        flex-wrap: wrap; 
+        column-gap: 1.5rem;
+        row-gap: 1rem;
+    }
+    .eventos__lista {
+        justify-content: end;
+    }
+    .agenda__lista {
+        justify-content: end;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .menu {
+        column-gap: 105px; 
+        flex-wrap: nowrap;
+    }
+    .menu__item:nth-child(1) { 
+        order: 1;
+    }
+    .menu__item:nth-child(2) {
+        order: 3;
+    }
+    .menu__item:nth-child(3) {
+        order: 4;
+    }
+    .menu__item:nth-child(4) {
+        order: 5;
+    }
+    .menu__item:nth-child(5) {
+        order: 2;
+    }
+}
